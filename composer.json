@@ -1,6 +1,6 @@
 {
-	"name": "bravedave/offer_to_lease",
-	"description": "Offer to Lease",
+	"name": "bravedave/signaturejs",
+	"description": "Canvas Signing utility",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"homepage": "http://brayworth.com",
