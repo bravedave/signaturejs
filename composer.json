@@ -1,0 +1,26 @@
+{
+	"name": "bravedave/offer_to_lease",
+	"description": "Offer to Lease",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"homepage": "http://brayworth.com",
+	"type": "library",
+	"license": "MIT",
+	"authors": [{
+		"name": "Brave Dave",
+		"email": "davbray@gmail.com",
+		"homepage": "http://brayworth.com"
+	}],
+	"require": {
+		"bravedave/dvc": "*"
+
+	},
+	"autoload": {
+		"psr-4": {
+			"signaturejs\\": "src/"
+
+		}
+
+	}
+
+}
