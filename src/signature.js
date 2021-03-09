@@ -48,6 +48,10 @@
 
     let ctx = canvas.getContext("2d");
 
+    /** set the background to white, we are goint to draw in black */
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
     let lineWidth = 2;
     let fillStyle = 'black';
 
@@ -59,19 +63,19 @@
     let flag = false,
       dot_flag = false;
 
-    _canvas.parent().css({
-      'position' : 'relative'
-    });
+    _canvas.parent().css({'position' : 'relative'});
 
-    $('<i class="fa fa-2x fa-times-circle text-muted"></i>')
+    $('<i class="bi bi-x-circle text-muted"></i>')
     .on('click', function (e) {
       let data = _canvas.data();
 
       if (!data.signing) return;
       e.stopPropagation(); e.preventDefault();
-      let h = canvas.height;
-      let w = canvas.width;
-      ctx.clearRect(0, 0, w, h);
+      // let h = canvas.height;
+      // let w = canvas.width;
+      // ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = 'white';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       _canvas.data('signatureCount', 0);
       _canvas.data('signed', false);
@@ -81,7 +85,7 @@
     .css({
       'position':'absolute',
       'top': '-2px',
-      'left': ( Number( _canvas.attr('width')) - 28) + 'px',
+      'left': ( Number( _canvas.attr('width')) - 20) + 'px',
 
     })
     .prependTo( _canvas.parent());
